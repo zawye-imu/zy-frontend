@@ -1,13 +1,29 @@
-import React from 'react'
-import bae from '../bae.gif'
+import React, { useState,useEffect } from 'react'
+import axios from 'axios'
+
 
 
 export const Main = () => {
+
+  const [data,setData] = useState([]);
+
+  
+  useEffect(()=>{
+    axios.get("https://zy-yu9w.onrender.com/api/testing/").then(
+      (res)=>{setData(res.data)
+      console.log(res.data)}
+    )
+  },[])
+
+
   return (
-    <>
-    <br/>
-    <div>Honey koe chit tl 	<span style={{color:"red"}}>&#10084;</span></div>
-    <img style={{margin:"45px",width:"450px",height:"600px"}} src={bae}></img>
+    <> 
+    Main Page
+    <br>
+    </br>
+    First connected data 
+    {data.map((ele)=>
+    <div>{ele.name}</div>)}
     </>
   )
 }
