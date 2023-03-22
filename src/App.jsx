@@ -4,6 +4,7 @@ import { Test } from './pages/Test';
 import { Contacts } from './pages/Contact';
 import { Aboutme } from './pages/Aboutme';
 import { Projects } from './pages/Projects';
+import { Landing } from './pages/Landing';
 import {
   createBrowserRouter,
   RouterProvider
@@ -15,7 +16,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Base />
+      element: <Landing />
     },
     {
       path: "about",

@@ -24,12 +24,7 @@ export default function Menu() {
   return (
     <header className="bg-white">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
-            <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
-          </a>
-        </div>
+
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -99,14 +94,9 @@ export default function Menu() {
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Other Places</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
             </a>
             <button
               type="button"
@@ -145,20 +135,21 @@ export default function Menu() {
                     </>
                   )}
                 </Disclosure>
+                {/* Theses are for mobile */}
                 <a
-                  href="#"
+                  href="/projects"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Projects
                 </a>
                 <a
-                  href="#"
+                  href="/aboutme"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About Me
                 </a>
                 <a
-                  href="#"
+                  href="contacts"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact
