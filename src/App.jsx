@@ -5,6 +5,7 @@ import { Contacts } from './pages/Contact';
 import { Aboutme } from './pages/Aboutme';
 import { Projects } from './pages/Projects';
 import { Landing } from './pages/Landing';
+import {Login } from './pages/Login';
 import {
   createBrowserRouter,
   RouterProvider
@@ -16,34 +17,43 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Landing />
+      element: <Base></Base>,
+      children: [
+        {
+          path: "home",
+          element: <Landing />
+        },
+        {
+          path: "about",
+          element: <div>About</div>,
+        },
+        {
+          path: "test",
+          element: <Test></Test>,
+        },
+        {
+          path: "projects",
+          element: <Projects />,
+        },
+        {
+          path: "contacts",
+          element: <Contacts />,
+        },
+        {
+          path: "aboutme",
+          element: <Aboutme />,
+        },
+      ]
     },
     {
-      path: "about",
-      element: <div>About</div>,
-    },
-    {
-      path: "test",
-      element: <Test></Test>,
-    },
-    {
-      path: "projects",
-      element: <Projects />,
-    },
-    {
-      path: "contacts",
-      element: <Contacts />,
-    },
-    {
-      path: "aboutme",
-      element: <Aboutme />,
+      path: "login",
+      element: <Login />,
     },
   ]);
 
 
   return (
     <div className="App">
-      <Base></Base>
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
