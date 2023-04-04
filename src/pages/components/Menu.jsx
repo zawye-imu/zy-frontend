@@ -7,7 +7,6 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Link } from 'react-router-dom'
 
 const products = [
   { name: 'My Blog', description: 'Where will it takes you!', href: '#', icon: ChartPieIcon },
