@@ -4,6 +4,11 @@ import { LockClosedIcon } from '@heroicons/react/20/solid'
 
 export const Login = () => {
     return <>
+    <div className="float-right m-4">
+    <button class="px-4 py-2 font-semibold text-white bg-blue-500 rounded hover:bg-blue-700 "  onClick={() => window.history.back()}>
+      Back
+    </button>
+    </div>
          <div className="flex min-h-full items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
         <div className="w-full max-w-md space-y-8">
           <div>
@@ -15,12 +20,6 @@ export const Login = () => {
             <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
               Sign in to your account
             </h2>
-            <p className="mt-2 text-center text-sm text-gray-600">
-              Or{' '}
-              <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                start your 14-day free trial
-              </a>
-            </p>
           </div>
           <form className="mt-8 space-y-6" action="#" method="POST">
             <input type="hidden" name="remember" defaultValue="true" />
