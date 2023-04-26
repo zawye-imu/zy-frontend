@@ -6,6 +6,7 @@ import { Aboutme } from './pages/Aboutme';
 import { Projects } from './pages/Projects';
 import { Landing } from './pages/Landing';
 import {Login } from './pages/Login';
+import  Scroll  from './pages/Scroll';
 import {
   createBrowserRouter,
   RouterProvider
@@ -48,6 +49,10 @@ function App() {
     {
       path: "login",
       element: <Login />,
+    },
+    {
+      path: "testScroll",
+      element: <Scroll />,
     },
   ]);
 
