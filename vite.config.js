@@ -6,6 +6,6 @@ export default () => {
     plugins: [react()],
     build: {
         outDir:"./build"
-    },
+    }
  })
 }
