@@ -7,7 +7,8 @@ import { Projects } from './pages/Projects';
 import { Landing } from './pages/Landing';
 import {Login } from './pages/Login';
 import  Scroll  from './pages/Scroll';
-import  Animate1  from './pages/Animate1';
+import  Animate2 from './pages/Animate2';
+import Animate3 from './pages/Animate3';
 import {
   createBrowserRouter,
   RouterProvider
@@ -50,9 +51,14 @@ function App() {
           element: <Scroll />,
         },
         {
-          path: "animate1",
-          element: <Animate1 />,
+          path: "animate2",
+          element: <Animate2 />,
         },
+        {
+          path: "animate3",
+          element: <Animate3 />,
+        },
+
       ]
     },
     {

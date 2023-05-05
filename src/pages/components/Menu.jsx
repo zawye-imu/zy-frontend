@@ -22,7 +22,7 @@ export default function Menu() {
 
   return (
     <header className="bg-white">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav className="mx-auto flex w-100 items-center justify-between p-1 lg:px-8 bg-gray-300">
 
         <div className="flex lg:hidden">
           <button
@@ -36,10 +36,11 @@ export default function Menu() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+            {/* Hide this for now  */}
+            {/* <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
               Other Places
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-            </Popover.Button>
+            </Popover.Button> */}
 
             <Transition
               as={Fragment}
@@ -74,29 +75,25 @@ export default function Menu() {
             </Transition>
           </Popover>
 
-          <a href="/projects" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="/projects" className="text-sm font-semibold leading-6 text-gray-900 m-4">
             Projects
           </a>
-          <a href="/aboutme" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="/aboutme" className="text-sm font-semibold leading-6 text-gray-900 m-4">
             About me
           </a>
-          <a href="/contacts" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="/contacts" className="text-sm font-semibold leading-6 text-gray-900 m-4">
             Contact
           </a>
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="/login" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center">
-            <a href="#" className="-m-1.5 p-1.5">
+            {/* Hide for a while */}
+            {/* <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Other Places</span>
-            </a>
+            </a> */}
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
