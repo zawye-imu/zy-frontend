@@ -6,13 +6,7 @@ export default function Base() {
   return (
     <>
     <Menu></Menu>
-    <div>
-      Font test <br />
-      <p className='font-neuFace'>Neutral Face</p>
-      <p className='font-sans'>Sans</p>
-      <p className='font-serif'>Serif</p>
-      <p className='font-mono'>Mono</p>
-    </div>
+    <div>This is there there right.</div>
     <Outlet></Outlet>
     </>
   )
