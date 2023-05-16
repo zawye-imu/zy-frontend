@@ -1,4 +1,5 @@
 import Typewriter from "typewriter-effect";
+import bg1 from "./bg_test1.jpg"
 
 export default function Menu() {
 
@@ -7,9 +8,9 @@ export default function Menu() {
   }
 
   return (
-  <div className="relative h-screen">
+  <div className="relative h-screen bg-cover" style={{backgroundImage:`url(${bg1})`}}>
    <header>
-    <nav className="flex flex-row justify-end p-2 content-around">
+    <nav className="flex flex-row justify-end pt-4 content-around">
     <a href="" className={styleClassNames.navItem} style={{fontFamily:"neutralFace"}}>/Projects</a>
     <a href="" className={styleClassNames.navItem}>/About </a>
     <a href="" className={styleClassNames.navItem}>/Contact</a>
@@ -31,15 +32,12 @@ export default function Menu() {
           .changeDeleteSpeed(2)
           .pauseFor(2000)
           .deleteAll()
-          .typeString("I like computers.")
-          .typeString("Anyway, glad to see you here.")
+          .typeString("I like <span>&#128187;</span> <span>&#128640;</span> <span>&#128175;</span> and <span>&#128176;</span>")
+          .typeString("<br>Anyway, glad to see you here.")
           .changeDeleteSpeed(3)
           .pauseFor(5000)
           .deleteAll()
           .start()
-          // birthday 
-          // hobbies
-          // nice to see you.
       }}
     />
     </div>
