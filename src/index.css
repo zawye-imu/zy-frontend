@@ -21,3 +21,8 @@ code {
   font-family: "neutralFace";
   src: url("../public/fonts/NeutralFace.otf");
 }
+
+@font-face {
+  font-family: "boola";
+  src: url("../src/fonts/BalooPaaji-Regular.ttf");
+}

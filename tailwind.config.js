@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         neuFace: ["neutralFace","ui-monospace"],
+        boola: ["boola","ui-monospace"],
       }
     },
   },

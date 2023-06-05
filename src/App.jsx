@@ -9,6 +9,7 @@ import {Login } from './pages/Login';
 import  Scroll  from './pages/Scroll';
 import  Animate2 from './pages/Animate2';
 import Animate3 from './pages/Animate3';
+import Start from './pages/Start';
 import {
   createBrowserRouter,
   RouterProvider
@@ -64,7 +65,11 @@ function App() {
     {
       path: "login",
       element: <Login />,
-    }
+    },
+    {
+      path: "real",
+      element: <Start />
+    },
   ]);
 
 
