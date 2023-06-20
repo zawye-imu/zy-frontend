@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from './parts/NavBar'
 import WelcomeText from './parts/WelcomText'
 import Aboutme from './parts/Aboutme'
+import Projects from './parts/Projects'
 
 export default function Start() {
 
@@ -12,6 +13,7 @@ export default function Start() {
           <WelcomeText></WelcomeText>
       </div>
       <Aboutme></Aboutme>
+      <Projects></Projects>
 
     </div>
   )
