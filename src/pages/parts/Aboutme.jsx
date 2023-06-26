@@ -7,7 +7,7 @@ export default function Aboutme() {
   return (
     <div className="w-5/6 m-auto flex md:flex-column static">
         <div className="w-4/6 md:w-2/6">
-          <img src={profileImg} alt="My Image" className="w-[170px] h-[240px] absolute top-[460px]" />
+          <img src={profileImg} alt="My Image" className="w-[170px] h-[240px] absolute top-[460px] md:static md:h-full md:w-full" />
         </div>
         <div className="w-2/4 md:w-4/6 font-boola">
           <span>About me</span>

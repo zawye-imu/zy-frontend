@@ -21,6 +21,10 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
+      element: <Start />
+    },
+    {
+      path: "/real",
       element: <Base></Base>,
       children: [
         {
@@ -65,11 +69,7 @@ function App() {
     {
       path: "login",
       element: <Login />,
-    },
-    {
-      path: "real",
-      element: <Start />
-    },
+    }
   ]);
 
 
