@@ -3,6 +3,7 @@ import NavBar from './parts/NavBar'
 import WelcomeText from './parts/WelcomText'
 import Aboutme from './parts/Aboutme'
 import Projects from './parts/Projects'
+import ContactMe from './parts/ContactMe'
 
 export default function Start() {
 
@@ -14,7 +15,7 @@ export default function Start() {
       </div>
       <Aboutme></Aboutme>
       <Projects></Projects>
-
+      <ContactMe></ContactMe>
     </div>
   )
 }
