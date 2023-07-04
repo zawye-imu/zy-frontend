@@ -10,7 +10,8 @@ export default function Projects() {
     },
     {
       projectName:"One or Two"
-    },{
+    },
+    {
       projectName: "The third One"
     }
     
