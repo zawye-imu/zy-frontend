@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import Typewriter from "typewriter-effect";
+import { useTranslation } from 'react-i18next';
+import { Button } from '@chakra-ui/react';
 
 
 
@@ -8,11 +10,13 @@ export default function WelcomeText() {
   const textStyle1 = "font-boola text-4xl md:text-8xl  leading-tight"
   const extraStyle1 = " opacity-50"
 
+  const {t, i18n} = useTranslation();
+
   return (
     <div className="flex mt-32 justify-center">
       <div className="text-left">
         <p className={textStyle1 + extraStyle1}>HI!</p>
-        <p className={textStyle1}>I am</p>
+        <p className={textStyle1}>{t("description.introduction")}</p>
         <p className={textStyle1}> Zaw Ye Htet Naing</p>
         <br />
         <Typewriter
