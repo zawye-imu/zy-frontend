@@ -8,17 +8,40 @@ import { Button } from '@chakra-ui/react'
 
 import { useTranslation } from 'react-i18next'
 import { useBreakpointValue } from '@chakra-ui/media-query';
+import { useMediaQuery } from '@chakra-ui/react'
+import { useDisclosure } from '@chakra-ui/react'
+
+import {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+} from '@chakra-ui/react'
 
 
 export default function NavBar() {
 
   const [menuIconClick,setMenuIconClick] = useState(true);
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const {t, i18n} = useTranslation();
 
   const buttonSize = useBreakpointValue({ base: 'xs', md: 'sm' });
 
+  const [isLargerThan800] = useMediaQuery('(min-width: 800px)')
+
   const handleOnClick = (event) => {
-    setMenuIconClick(!menuIconClick);
+    if(isLargerThan800)
+    {
+      setMenuIconClick(!menuIconClick);
+    }
+    else{
+      onOpen();
+    }
+    
+
   }
 
   return (
@@ -42,6 +65,22 @@ export default function NavBar() {
       </div>
       
     </div>
+    <Drawer
+        isOpen={isOpen}
+        placement='top'
+        onClose={onClose}
+        size="xs"
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerBody className='flex flex-col font-boola m-2'>
+            <a>About</a>
+            <a>Projects</a>
+            <a>Contacts</a>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
     </div>
   )
 }

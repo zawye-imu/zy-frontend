@@ -4,6 +4,9 @@ import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector'
 
+import { ja_data } from './locales/ja';
+import { en_data } from './locales/en';
+
 // import ja_data from "./locales/ja";
 // don't want to use this?
 // have a look at the Quick start guide 
@@ -28,22 +31,8 @@ i18n
       escapeValue: false, // not needed for react as it escapes by default
     },
     resources:{
-        en:{
-            translation: {
-              description: {
-                introduction: 'I am',
-                part2: 'Learn React'
-              }
-            }
-        },
-        ja:{
-            translation: {
-              description: {
-                introduction: '私は',
-                part2: 'Learn React'
-              }
-            }
-        },
+        en:en_data,
+        ja:ja_data,
     }
   });
 

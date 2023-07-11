@@ -1,8 +1,8 @@
-export default ja_data = {
-    translation: {
-      description: {
-        introduction: 'I am',
-        part2: 'Learn React'
-      }
+export const ja_data = {
+  translation: {
+    description: {
+      introduction: '私は',
+      part2: 'Learn React'
     }
+  }
 }
