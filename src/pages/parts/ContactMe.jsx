@@ -25,9 +25,9 @@ export default function ContactMe() {
 
   return (
     <div className="w-8/12 m-auto mt-20 mb-20">
-        <h1 className='font-boola text-2xl'>Contact Me</h1>
+        <h1 className='font-boola text-2xl my-4'>Contact Me</h1>
         <FormControl>
-        <FormLabel>Your Contact Address</FormLabel>
+        <FormLabel>Contact Address</FormLabel>
         <Input type='text' value={address} name="address" onChange={handleOnChange}/>
         </FormControl>
         <FormControl>
