@@ -13,7 +13,15 @@ export default function Aboutme() {
           <img src={profileImg} alt="My Image" className="w-[170px] h-[240px] md:static md:h-full md:w-full" />
         </div>
         <div className="w-2/4 md:w-4/6 font-boola">
-          <p className="text-left font-sans">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae dolore illo, eligendi, nesciunt, quia eaque exercitationem quasi molestiae repellendus eum nam? Sunt est quae quos eveniet quidem veritatis eos id.</p>
+          <p className="text-left font-sans">Welcome to my portfolio website!<br /><br />I'm Zaw Ye Htet Naing, a software engineer. Here, you will find a glimpse of my 
+          professional world.<br /> <br />
+          With a mind for continuous learning, I am always looking to fill this place with more awesome. Explore my projects and let's connect to create something awesome together. 
+          Hope you enjoy your stay here.
+          <br /><br />
+          Best Regards, <br />
+          <i>Zaw</i>
+
+          </p>
         </div>
     </div>
     </div>
