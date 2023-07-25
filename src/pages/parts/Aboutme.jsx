@@ -1,5 +1,6 @@
 import React from 'react'
 import profileImg from '../../profile_1.png'
+import LinkedInImg from '../../images/linkedin.png';
 
 
 export default function Aboutme() {
@@ -22,7 +23,11 @@ export default function Aboutme() {
           <i>Zaw</i>
 
           </p>
-          <div className="mt-6 flex justify-around">CV, Linkedin</div>
+          <div className="mt-6 flex flex-start justify-start">
+          <img alt='cv' className='mr-4'></img> 
+          <img src={LinkedInImg} className='w-6 h-6 mr-4 hover:cursor-pointer' onClick={()=>{
+            window.open("https://www.linkedin.com/in/zawyehtetnaing/","_blank")
+          }}></img></div>
         </div>
         
     </div>
