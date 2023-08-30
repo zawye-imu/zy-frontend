@@ -1,0 +1,28 @@
+.hiddenText {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.projectCard{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.projectCard:hover {
+    background-color: beige;
+    cursor: pointer;
+}
+
+.projectCard:hover .hiddenText {
+    bottom: 0;
+}

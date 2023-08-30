@@ -19,7 +19,7 @@ export default function Aboutme() {
           <p className="text-left font-sans">Welcome to my portfolio website!<br /><br />I'm Zaw Ye Htet Naing, a software engineer. Here, you will find a glimpse of my 
           professional world.<br /> <br />
           With a mind for continuous learning, I am always looking to fill this place with more awesome projects. Explore my projects and let's connect to create something awesome together. 
-          Hope you enjoy your stay here.
+          And,  I hope you enjoy your stay here.
           <br /><br />
           Best Regards, <br />
           <i>Zaw</i>

@@ -1,6 +1,6 @@
 import {React, useState} from 'react'
 import { FormControl,FormLabel,Input,Textarea, Button } from '@chakra-ui/react'
-import { GrSend } from "react-icons/gr"
+import { BsSend } from "react-icons/bs"
 
 export default function ContactMe() {
 
@@ -35,7 +35,7 @@ export default function ContactMe() {
         <Textarea name="message" value={message} onChange={handleOnChange}></Textarea>
         </FormControl>
         <div className="flex flex-row-reverse mt-6">
-          <Button isLoading={isLoading} rightIcon={<GrSend color='blue'/>} colorScheme='blue' variant='outline' onClick={handleSend}>
+          <Button isLoading={isLoading} rightIcon={<BsSend style={{color: "blue"}}/>} colorScheme='blue' variant='outline' onClick={handleSend}>
           Send
           </Button>
         </div>
