@@ -3,7 +3,7 @@
     bottom: -100%;
     left: 0;
     width: 100%;
-    background-color: blue;
+    background-color: silver;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -19,7 +19,7 @@
 }
 
 .projectCard:hover {
-    background-color: beige;
+    background-color: rgb(169,169,169);
     cursor: pointer;
 }
 

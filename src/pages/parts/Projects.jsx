@@ -5,13 +5,16 @@ export default function Projects() {
 
   const mock_data = [
     {
-      projectName:"Hello"
+      projectName:"Customized ERP System",
+      img: "ERP.png"
     },
     {
-      projectName:"One or Two"
+      projectName:"One or Two",
+      img: ""
     },
     {
-      projectName: "The third One"
+      projectName: "The third One",
+      img: ""
     }
     
   ]
@@ -21,7 +24,7 @@ export default function Projects() {
       <h1 className='font-boola text-2xl my-4'>Projects & Experiences</h1>
       <div className="mt-16 w-10/12 m-auto h-fit flex flex  -col items-center space-y-8 md:flex-row md:space-x-32 md:space-y-0">
               {mock_data.map(d => 
-              <div className='projectCard border-solid border-black border-2 w-[250px] h-[280px] rounded-lg'>
+              <div className="projectCard border-solid border-black border-2 w-[250px] h-[280px] rounded-lg bg-[url('/ERP.png')] bg-center bg-cover bg-origin-padding">
               <div className='hiddenText'>{d.projectName}</div>
               </div>
               )}
