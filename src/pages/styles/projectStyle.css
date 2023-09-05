@@ -21,6 +21,7 @@
 .projectCard:hover {
     background-color: rgb(169,169,169);
     cursor: pointer;
+    background-size: 120%;
 }
 
 .projectCard:hover .hiddenText {
