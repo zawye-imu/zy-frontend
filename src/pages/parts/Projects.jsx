@@ -7,19 +7,19 @@ export default function Projects() {
   const mock_data = [
     {
       projectName:"Project Management System",
-      img: ""
+      img: "src/images/project_mgmt.png"
     },
     {
       projectName:"NLP - emotion detection from twitter posts using ANN",
-      img: ""
+      img: "src/images/NLP.png"
     },
     {
       projectName:"Customized ERP System",
-      img: ERP
+      img: "src/images/ERP.png"
     },
     {
       projectName:"Odoo Cloud Development",
-      img: "logo512.png"
+      img: "src/images/Odoo.png"
     },
     {
       projectName: "Knorr Donation Website",
@@ -27,11 +27,11 @@ export default function Projects() {
     },
     {
       projectName: "POS website using YII",
-      img: ""
+      img: "src/images/YII.jpg"
     },
     {
       projectName: "Library Management System",
-      img: ""
+      img: "src/images/library_mgmt.jpg"
     },
     
   ]
@@ -41,7 +41,10 @@ export default function Projects() {
       <h1 className='font-boola text-2xl my-4'>Projects & Experiences</h1>
       <div className="mt-16 w-10/12 m-auto flex flex-wrap items-center">
               {mock_data.map((d,idx) => 
-              <div className={`projectCard border-solid border-black border-2 w-[250px] h-[280px] m-8 rounded-lg bg-center bg-cover bg-origin-padding`  + ` bg-[url('${d.img}')]`}>
+              <div style={{
+                backgroundImage:`url(${d.img})`
+              }} 
+              className={`projectCard border-solid border-black border-2 w-[250px] h-[280px] m-8 rounded-lg bg-center bg-cover bg-origin-padding bg-no-repeat`}>
               <div className='hiddenText'>{d.projectName}</div>
               </div>
               )}

@@ -9,7 +9,7 @@ export default function Start() {
 
   return (
     <div>
-      <div className="h-[500px] md:h-screen w-screen bg-[url('src/background006.jpg')] bg-no-repeat bg-cover">
+      <div className="h-[500px] md:h-screen w-screen bg-[url('src/images/background006.jpg')] bg-no-repeat bg-cover">
           <NavBar></NavBar>
           <WelcomeText></WelcomeText>
       </div>
