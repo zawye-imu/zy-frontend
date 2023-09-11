@@ -15,7 +15,7 @@ export default function Projects() {
     },
     {
       projectName:"Customized ERP System",
-      img: "src/images/ERP.png"
+      img: ERP
     },
     {
       projectName:"Odoo Cloud Development",

@@ -1,7 +1,6 @@
 import React from 'react'
 import profileImg from '../../profile_1.png'
 import LinkedInImg from '../../images/linkedin.png';
-import githubImg from '../../images/github.png';
 import githubImg2 from '../../images/github2.jpg';
 import cvImg from '../../images/cv.png';
 
