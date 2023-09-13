@@ -1,17 +1,25 @@
 import React from 'react'
 import "../styles/projectStyle.css";
+
+// Images
 import ERP from "../../images/ERP.png"
+import projectMgmt from "../../images/project_mgmt.png"
+import NLP from "../../images/NLP.png"
+import Odoo from "../../images/Odoo.png"
+import Knorr from "../../images/Knorr.jpg"
+import YII from "../../images/YII.jpg"
+import Library from "../../images/library_mgmt.jpg"
 
 export default function Projects() {
 
   const mock_data = [
     {
       projectName:"Project Management System",
-      img: "src/images/project_mgmt.png"
+      img: projectMgmt
     },
     {
       projectName:"NLP - emotion detection from twitter posts using ANN",
-      img: "src/images/NLP.png"
+      img:  NLP
     },
     {
       projectName:"Customized ERP System",
@@ -19,19 +27,19 @@ export default function Projects() {
     },
     {
       projectName:"Odoo Cloud Development",
-      img: "src/images/Odoo.png"
+      img: Odoo
     },
     {
       projectName: "Knorr Donation Website",
-      img: "src/images/Knorr.jpg"
+      img: Knorr
     },
     {
       projectName: "POS website using YII",
-      img: "src/images/YII.jpg"
+      img: YII
     },
     {
       projectName: "Library Management System",
-      img: "src/images/library_mgmt.jpg"
+      img: Library
     },
     
   ]
