@@ -47,7 +47,7 @@ export default function Projects() {
   return (
     <div>
       <h1 className='font-boola text-2xl my-4'>Projects & Experiences</h1>
-      <div className="mt-16 w-10/12 m-auto flex flex-wrap items-center">
+      <div className="mt-16 flex flex-wrap justify-center">
               {mock_data.map((d,idx) => 
               <div style={{
                 backgroundImage:`url(${d.img})`
