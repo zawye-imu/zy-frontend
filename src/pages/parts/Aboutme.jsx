@@ -3,9 +3,10 @@ import profileImg from '../../profile_1.png'
 import LinkedInImg from '../../images/linkedin.png';
 import githubImg2 from '../../images/github2.jpg';
 import cvImg from '../../images/cv.png';
+import { useTranslation } from 'react-i18next';
 
 export default function Aboutme() {
-
+  const {t, i18n} = useTranslation();
   return (
     <div className='mt-2'>
       <h1 className='font-boola text-2xl my-4'>About me</h1>
@@ -15,14 +16,7 @@ export default function Aboutme() {
           <img src={profileImg} alt="My Image" className="w-[170px] h-[240px] md:static md:h-full md:w-full" />
         </div>
         <div className="w-2/4 md:w-4/6 font-boola text-xs md:text-base">
-          <p className="text-left font-sans">Welcome to my portfolio website!<br /><br />I'm Zaw Ye Htet Naing, a software engineer. Here, you will find a glimpse of my 
-          professional world.<br /> <br />
-          With a mind for continuous learning, I am always looking to fill this place with more awesome projects. Explore my projects and let's connect to create something awesome together. 
-          And,  I hope you enjoy your stay here.
-          <br /><br />
-          Best Regards, <br />
-          <i>Zaw</i>
-
+          <p className="text-left font-sans" dangerouslySetInnerHTML={{ __html: t("aboutMe") }}>
           </p>
           <div className="mt-6 flex flex-start justify-start items-center">
             
