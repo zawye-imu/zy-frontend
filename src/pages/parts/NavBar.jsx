@@ -21,6 +21,8 @@ import {
   DrawerCloseButton,
 } from '@chakra-ui/react'
 
+import { useHookstate } from '@hookstate/core'
+import globalStateRevised from '../../states/GlobalStateRevised'
 
 export default function NavBar() {
 
@@ -31,6 +33,8 @@ export default function NavBar() {
   const buttonSize = useBreakpointValue({ base: 'xs', md: 'sm' });
 
   const [isLargerThan800] = useMediaQuery('(min-width: 800px)')
+
+  const state = useHookstate(globalStateRevised);
 
   const handleOnClick = (event) => {
     if(isLargerThan800)
@@ -44,6 +48,28 @@ export default function NavBar() {
 
   }
 
+  const handleNavClick = (type) => {
+
+    switch(type){
+      case "about":
+        { 
+          state.scrollRefs.aboutMeRef.value.current.scrollIntoView({ behavior: 'smooth' });
+        }
+        break;
+      case "projects":
+        {
+          state.scrollRefs.projectsRef.value.current.scrollIntoView({ behavior: 'smooth' });
+        }
+      case "contact":
+      {
+        state.scrollRefs.contactMeRef.value.current.scrollIntoView({ behavior: 'smooth' });
+      }
+      default:
+        pass
+    }
+    
+  }
+
   return (
     <div className='relative'>
     <div className="grid grid-cols-2 w-2/3 m-auto">
@@ -51,8 +77,8 @@ export default function NavBar() {
         <span className="font-boola  text-3xl">ZawYe</span>
       </div>
       <div className="flex justify-end mt-6">
-      {!menuIconClick && <MenuOptions />}
-      <Icon className="hover:cursor-pointer" as={menuIconClick ? AiOutlineMenu : CgMenuMotion} onClick={handleOnClick} boxSize={6}></Icon>
+      {isLargerThan800 && <MenuOptions handleNavClick={handleNavClick}/>}
+      {!isLargerThan800 && <Icon className="hover:cursor-pointer" as={menuIconClick ? AiOutlineMenu : CgMenuMotion} onClick={handleOnClick} boxSize={6}></Icon>}
       <div className='absolute right-2.5 top-5 md:right-20'>
       <Button onClick={()=>
         {
@@ -75,9 +101,9 @@ export default function NavBar() {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerBody className='flex flex-col font-boola m-2'>
-            <a>About</a>
-            <a>Projects</a>
-            <a>Contacts</a>
+            <a onClick={()=>handleNavClick("about")}>About</a>
+            <a onClick={()=>handleNavClick("projects")}>Projects</a>
+            <a onClick={()=>handleNavClick("contact")}>Contacts</a>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
