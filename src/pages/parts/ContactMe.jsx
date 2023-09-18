@@ -2,11 +2,15 @@ import {React, useState} from 'react'
 import { FormControl,FormLabel,Input,Textarea, Button } from '@chakra-ui/react'
 import { BsSend } from "react-icons/bs"
 
+import { useTranslation } from 'react-i18next'
+
 export default function ContactMe() {
 
   const [address,setAddress] = useState("")
   const [message,setMessage] = useState("")
   const [isLoading,setIsLoading] = useState(false);
+
+  const {t, i18n} = useTranslation();
 
   const handleOnChange = (e) => {
     switch(e.target.name){
@@ -27,11 +31,11 @@ export default function ContactMe() {
     <div className="w-8/12 m-auto mt-20 mb-20">
         <h1 className='font-boola text-2xl my-4'>Contact Me</h1>
         <FormControl>
-        <FormLabel>Contact Address</FormLabel>
+        <FormLabel>{t("contactAddress")}</FormLabel>
         <Input type='text' value={address} name="address" onChange={handleOnChange}/>
         </FormControl>
         <FormControl>
-        <FormLabel>Message </FormLabel>
+        <FormLabel>{t("message")}</FormLabel>
         <Textarea name="message" value={message} onChange={handleOnChange}></Textarea>
         </FormControl>
         <div className="flex flex-row-reverse mt-6">

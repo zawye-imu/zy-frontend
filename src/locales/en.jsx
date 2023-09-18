@@ -14,6 +14,9 @@ export const en_data = {
       And,  I hope you enjoy your stay here. \
       <br /><br /> \
       Best Regards, <br /> \
-      <i>Zaw</i>"
+      <i>Zaw</i>",
+      projectExperiences: "Project & Experiences",
+      contactAddress: "Contact Address",
+      message: "Message",
     }
   }

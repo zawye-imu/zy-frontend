@@ -10,7 +10,15 @@ import Knorr from "../../images/Knorr.jpg"
 import YII from "../../images/YII.jpg"
 import Library from "../../images/library_mgmt.jpg"
 
+import { useTranslation } from 'react-i18next';
+import ProjectInfoModal from './ProjectInfoModal';
+
+import { useState } from 'react';
+
 export default function Projects() {
+
+  const {t, i18n} = useTranslation();
+  const [modalOpen,setModalOpen] = useState(false);
 
   const mock_data = [
     {
@@ -44,19 +52,29 @@ export default function Projects() {
     
   ]
 
+  const projectCardOnClick = () => {
+    setModalOpen(true)
+  }
+
+  const modalOnClose =  () => {
+    setModalOpen(false);
+  }
+
   return (
     <div>
-      <h1 className='font-boola text-2xl my-4'>Projects & Experiences</h1>
+      <h1 className='font-boola text-2xl my-4'>{t("projectExperiences")}</h1>
       <div className="mt-16 flex flex-wrap justify-center">
               {mock_data.map((d,idx) => 
               <div style={{
                 backgroundImage:`url(${d.img})`
               }} 
-              className={`projectCard border-solid border-black border-2 w-[250px] h-[280px] m-8 rounded-lg bg-center bg-cover bg-origin-padding bg-no-repeat`}>
+              className={`projectCard border-solid border-black border-2 w-[250px] h-[280px] m-8 rounded-lg bg-center bg-cover bg-origin-padding bg-no-repeat`}
+              onClick={projectCardOnClick}>
               <div className='hiddenText'>{d.projectName}</div>
               </div>
               )}
       </div>
+      <ProjectInfoModal modalOpen={modalOpen} modalOnClose={modalOnClose}></ProjectInfoModal>
     </div>
   )
 }
