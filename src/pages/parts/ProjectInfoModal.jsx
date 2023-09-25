@@ -16,19 +16,30 @@ export default function ProjectInfoModal(props) {
 
     return (
         <>
-        <Modal isOpen={modalOpen} onClose={modalOnClose}>
+        <Modal isOpen={modalOpen} onClose={modalOnClose} size="xl">
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>Modal Title</ModalHeader>
+            <ModalHeader>Customized ERP System</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
+              <table>
+                <tr>
+                  <td>Used Language</td>
+                  <td> : </td>
+                  <td>PHP YII, CSS, HTML, Javascript</td>
+                </tr>
+                <tr>
+                  <td>Development Period</td>
+                  <td> : </td>
+                  <td>2021 Sep - 2021 Feb</td>
+                </tr>
+                <tr>
+                  <td>Type of Development:</td>
+                  <td> : </td>
+                  <td>developing for client</td>
+                </tr>
+              </table>
             </ModalBody>
-            <ModalFooter>
-              <Button colorScheme='blue' mr={3} onClick={modalOnClose}>
-                Close
-              </Button>
-              <Button variant='ghost'>Secondary Action</Button>
-            </ModalFooter>
           </ModalContent>
         </Modal>
       </>
