@@ -3,16 +3,16 @@ import {
     ModalOverlay,
     ModalContent,
     ModalHeader,
-    ModalFooter,
     ModalBody,
-    ModalCloseButton,
-    Button
+    ModalCloseButton
 } from '@chakra-ui/react'
 
 
 export default function ProjectInfoModal(props) {
     
-    const {modalOpen,modalOnClose} = props;
+    const {modalOpen,modalOnClose,data} = props;
+
+    console.log("logging",data);
 
     return (
         <>
@@ -26,19 +26,33 @@ export default function ProjectInfoModal(props) {
                 <tr>
                   <td>Used Language</td>
                   <td> : </td>
-                  <td>PHP YII, CSS, HTML, Javascript</td>
+                  <td> {data?.detailInfo?.usedLanguage}</td>
                 </tr>
                 <tr>
                   <td>Development Period</td>
                   <td> : </td>
-                  <td>2021 Sep - 2021 Feb</td>
+                  <td>{data?.detailInfo?.period}</td>
                 </tr>
                 <tr>
                   <td>Type of Development:</td>
                   <td> : </td>
-                  <td>developing for client</td>
+                  <td> {data?.detailInfo?.type}</td>
+                </tr>
+                <tr>
+                  <td>General Duties:</td>
+                  <td> : </td>
+                  <td> {data?.detailInfo?.duties}</td>
+                </tr>
+                <tr>
+                  <td>Team Members:</td>
+                  <td> : </td>
+                  <td> {data?.detailInfo?.membersCount}</td>
                 </tr>
               </table>
+              <br></br>
+              <p>
+                {data?.detailInfo?.explanation}
+              </p>
             </ModalBody>
           </ModalContent>
         </Modal>
