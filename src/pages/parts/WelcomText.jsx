@@ -30,8 +30,6 @@ export default function WelcomeText() {
     {
       return t("goodNight")
     }
-
-    console.log("Logging",now.getHours())
     
     return "Hi!"
   }
@@ -57,7 +55,7 @@ export default function WelcomeText() {
               .typeString("<span class='text-xl md:text-4xl  leading-loose'>Tech Enthusiast &#9995;</span> ")
               .pauseFor(2000)
               .deleteAll()
-              .typeString("<span class='text-xl md:text-4xl  leading-loose'> &#127911; &#127864; </span> ")
+              .typeString("<span class='text-xl md:text-4xl  leading-loose'> Nice to meet you here! </span> ")
               .pauseFor(2000)
               .deleteAll()
               .pauseFor(4000)

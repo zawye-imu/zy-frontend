@@ -25,6 +25,10 @@ export default function ContactMe() {
 
   const handleSend = (e) => {
     setIsLoading(true)
+    setTimeout(()=> {
+      setIsLoading(false)
+    },3000)
+    
   }
 
   return (

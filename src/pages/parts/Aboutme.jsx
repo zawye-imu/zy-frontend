@@ -21,7 +21,7 @@ export default function Aboutme() {
           <div className="mt-6 flex flex-start justify-start items-center">
             
           <img src={cvImg} alt='cv' className='w-8 h-8 mr-8 hover:cursor-pointer' onClick={()=>{
-            window.open("https://2018416e-28a1-4020-be3c-c5deefebfcf5.filesusr.com/ugd/66b817_c1c2480746e647bba2cf248a1bb185b3.pdf","_blank")
+            window.open("https://2018416e-28a1-4020-be3c-c5deefebfcf5.filesusr.com/ugd/66b817_8d6a3941793c4349a5711f3b7cafd055.pdf","_blank")
           }}>
           </img> 
           <img src={LinkedInImg} className='w-6 h-6 mr-8 hover:cursor-pointer' onClick={()=>{
